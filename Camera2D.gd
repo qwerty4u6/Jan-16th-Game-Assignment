@@ -7,5 +7,4 @@ func _ready():
 	position = player.position
 
 func _process(delta):
-	position.x -= (position.x - player.position.x) / 5
-	position.y -= (position.y - player.position.y) / 5
+	position -= (position - player.position) / 5
