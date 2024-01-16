@@ -1,9 +1,14 @@
 extends Area2D
 
+var player
+
 var velocity = Vector2(0, 0)
 
 func _ready():
-	position = Vector2(960, 960) / 2
+	player = get_tree().root.get_node("Main/Player")
+	
+	var player_pos = player.position
+	rotation = atan2(player_pos.y - position.y, player_pos.x - position.x) + PI / 2
 
 func closest(x, arr, arr2 = []):
 	for i in arr.size():
@@ -11,20 +16,12 @@ func closest(x, arr, arr2 = []):
 	return arr[arr2.find(arr2.min())]
 
 func _physics_process(delta):
-	if Input.is_action_pressed("up"):
-		velocity.y -= 3
-	if Input.is_action_pressed("down"):
-		velocity.y += 3
-	if Input.is_action_pressed("left"):
-		velocity.x -= 3
-	if Input.is_action_pressed("right"):
-		velocity.x += 3
 	velocity *= 0.75
 	position += velocity
 
 func _process(delta):
-	var mouse_pos = get_global_mouse_position()
-	var a = atan2(mouse_pos.y - position.y, mouse_pos.x - position.x) + PI / 2
+	var player_pos = player.position
+	var a = atan2(player_pos.y - position.y, player_pos.x - position.x) + PI / 2
 	a = closest(rotation, [a + PI * 2, a, a - PI * 2])
 	rotation -= (rotation - a) / 5
 	rotation = fmod(rotation, PI * 2)

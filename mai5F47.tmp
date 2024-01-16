@@ -1,14 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://8y5gxwen5mdw"]
+[gd_scene load_steps=5 format=3 uid="uid://8y5gxwen5mdw"]
 
 [ext_resource type="Texture2D" uid="uid://c3hseoq47ywxl" path="res://resources/bg.png" id="1_t1aj8"]
 [ext_resource type="PackedScene" uid="uid://cp4b0liisd4so" path="res://scenes/player.tscn" id="2_gkymk"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="2_xnvfl"]
 [ext_resource type="PackedScene" uid="uid://vxknkolt7y58" path="res://scenes/enemy.tscn" id="4_rqhfh"]
-[ext_resource type="Script" path="res://Label.gd" id="5_eh1fo"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_x5g71"]
-line_spacing = 5.0
-font_size = 32
 
 [node name="Main" type="Node2D"]
 
@@ -31,14 +26,9 @@ position = Vector2(480, 480)
 [node name="Enemy" parent="." instance=ExtResource("4_rqhfh")]
 position = Vector2(185, 367)
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="UI"]
-offset_left = 45.0
-offset_top = 28.0
-offset_right = 202.0
-offset_bottom = 84.0
-text = "Score: 100"
-label_settings = SubResource("LabelSettings_x5g71")
-vertical_alignment = 1
-script = ExtResource("5_eh1fo")
+[node name="Label" type="Label" parent="."]
+offset_left = -474.0
+offset_top = -470.0
+offset_right = -434.0
+offset_bottom = -447.0
+text = "100"
