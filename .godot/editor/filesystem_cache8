@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1705441056
+Camera2D.gd::GDScript::-1::1704836524::0::1::::<>Camera2D<>::
+main.tscn::PackedScene::2367610372921984236::1705098083::0::1::::<><>::uid://c3hseoq47ywxl::::res://resources/bg.png<>uid://cp4b0liisd4so::::res://scenes/player.tscn<>res://Camera2D.gd
+::res://resources/::1704837426
+bg.png::CompressedTexture2D::6753680443980075473::1704836872::1704836877::1::::<><>::
+player.png::CompressedTexture2D::4657559585428475403::1704837259::1704837426::1::::<><>::
+::res://scenes/::1705098083
+player.gd::GDScript::-1::1705098079::0::1::::<>Area2D<>::
+player.tscn::PackedScene::5885646929167786654::1705098083::0::1::::<><>::res://scenes/player.gd<>uid://b7mflcy66w81t::::res://resources/player.png
